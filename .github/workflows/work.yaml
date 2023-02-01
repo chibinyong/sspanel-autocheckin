@@ -30,7 +30,6 @@ env:
 jobs:
     build:
         runs-on: ubuntu-latest
-        container: node:16.16.0
 
         steps:
             - name: Checkout codes
