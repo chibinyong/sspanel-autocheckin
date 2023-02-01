@@ -6,7 +6,7 @@ on:
         branches:
             - master
     schedule:
-        - cron: '1 */12 * * *'
+        - cron: '20 18 * * *'
     watch:
         types: 
             - started
@@ -33,13 +33,12 @@ jobs:
 
         steps:
             - name: Checkout codes
-            - uses: actions/checkout@v2
-                
+              uses: actions/checkout@v2
+            
             - name: Install depends
               run: |
                 sudo apt-get update
                 sudo apt-get -y install curl jq
-
             - name: Request API
               run: |
                 bash ssp-autocheckin.sh
